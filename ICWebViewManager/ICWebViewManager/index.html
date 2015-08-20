@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+
+  </head>
+  <body>
+    <!--
+      The nav bar that will be updated as we navigate between views.
+    -->
+
+
+    <script>
+     
+       function jidong(){
+
+           location.href = 'http://www.jd.com';
+
+       }
+
+       function baidu(){
+
+           location.href = 'http://www.baidu.com';
+
+       }
+<!--    function deleted(id){-->
+<!--        -->
+<!--        var chat =  document.getElementById(id);-->
+<!--        if (chat != null)-->
+<!--        chat.parentNode.removeChild(chat);-->
+<!--        -->
+<!--    }-->
+
+    </script>
+    <div id = "text1">
+        <a  type="text" style = "color:#901221;">测试交互</a>
+    </div>
+    <div name = "name1">
+        <button  type="button" onclick="jidong()">去京东</button>
+    </div>
+    <div>
+        <button  type="button" onclick="baidu()">去百度</button>
+    </div>
+    <ion-nav-view></ion-nav-view>
+  </body>
+</html>
