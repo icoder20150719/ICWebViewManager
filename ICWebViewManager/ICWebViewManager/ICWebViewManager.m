@@ -100,6 +100,9 @@ static id instance ;
     if ([urlStr isEqualToString:@"about:blank"]) {
         return NO;
     }
+    if ([urlStr hasPrefix:@"tel:"]||[urlStr hasPrefix:@"msm:"]) {
+        return YES;
+    }
     //当前页面跳转
     if (urlStr.length > self.currentBaseUrlStr.length) {
     NSString * mach_urlStr =  [urlStr substringToIndex:self.currentBaseUrlStr.length ];
