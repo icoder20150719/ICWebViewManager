@@ -19,6 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"popToRoot" style:0 target:self action:@selector(popToRootViewControllerAnimated)];
     self.view.backgroundColor = [UIColor whiteColor];
     //创建WebView
     UIWebView *web = [[UIWebView alloc]initWithFrame:self.view.bounds];
@@ -39,11 +40,9 @@
     
 }
 
--(void)viewWillAppear:(BOOL)animated
+-(void)popToRootViewControllerAnimated
 {
-    [super viewWillAppear:animated];
-    
-  
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 -(void)webViewDidFinishLoad:(UIWebView *)webView{

@@ -38,7 +38,10 @@
     
     return [super popViewControllerAnimated:animated];
 }
-
+-(NSArray *)popToRootViewControllerAnimated:(BOOL)animated{
+    [self.urlViewController removeAllObjects];
+    return [super popToRootViewControllerAnimated:animated];
+}
 -(BOOL)dealWithUrlStr:(NSString *)urlStr
 {
     NextViewController *nextVc = [[NextViewController alloc]init];
